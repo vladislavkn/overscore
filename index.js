@@ -1,3 +1,6 @@
 const _ = require("./overscore");
 
-console.log(_.compact([0, 1, false, 2, "", 3]));
+const arr = [1, 2, 3, 4];
+const newArr = _.concat(arr, 5, [6], [[7]]);
+
+console.log(arr, newArr);

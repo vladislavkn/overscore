@@ -21,4 +21,10 @@ _.chunk = (array, size) =>
 
 _.compact = (array) => array.filter(Boolean);
 
+_.concat = (array, ...values) =>
+  values.reduce(
+    (acc, item) => (item instanceof Array ? acc.concat(item) : [...acc, item]),
+    array.slice(0)
+  );
+
 module.exports = _;
