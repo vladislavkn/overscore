@@ -38,4 +38,16 @@ _.difference = (array1, array2) => {
 
 _.now = () => Date.now();
 
+_.after = (maxCount, fn) => {
+  let count = 1;
+  return (...args) => {
+    if (count < maxCount) {
+      count++;
+      return;
+    } else {
+      return fn(...args);
+    }
+  };
+};
+
 module.exports = _;
