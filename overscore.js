@@ -19,4 +19,6 @@ _.chunk = (array, size) =>
         { result: [[]], i: 0, holderIndex: 0 }
       ).result;
 
+_.compact = (array) => array.filter(Boolean);
+
 module.exports = _;
