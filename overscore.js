@@ -36,4 +36,6 @@ _.difference = (array1, array2) => {
   return array1.filter((item) => !hashTable.has(item));
 };
 
+_.now = () => Date.now();
+
 module.exports = _;
