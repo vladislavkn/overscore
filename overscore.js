@@ -27,4 +27,13 @@ _.concat = (array, ...values) =>
     array.slice(0)
   );
 
+_.difference = (array1, array2) => {
+  const hashTable = array2.reduce((acc, item) => {
+    acc.set(item, 0);
+    return acc;
+  }, new Map());
+
+  return array1.filter((item) => !hashTable.has(item));
+};
+
 module.exports = _;
