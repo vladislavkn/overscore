@@ -50,4 +50,6 @@ _.after = (maxCount, fn) => {
   };
 };
 
+_.ary = (fn, count) => (...args) => fn(...args.slice(0, count));
+
 module.exports = _;
