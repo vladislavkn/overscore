@@ -52,4 +52,14 @@ _.after = (maxCount, fn) => {
 
 _.ary = (fn, count) => (...args) => fn(...args.slice(0, count));
 
+_.before = (maxCount, fn) => {
+  let count = 0;
+  return (...args) => {
+    if (count < maxCount) {
+      count++;
+      return fn(...args);
+    }
+  };
+};
+
 module.exports = _;

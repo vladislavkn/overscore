@@ -1,4 +1,6 @@
 const _ = require("./overscore");
 
-const show = ["6", "8", "10"].map(_.ary(parseInt, 1));
-console.log(show);
+const fn = _.before(2, () => console.log("test"));
+fn();
+fn();
+fn();
